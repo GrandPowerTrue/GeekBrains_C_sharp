@@ -12,10 +12,10 @@ int prov = b % a;
 
 if (prov != 0)
 {
-    Console.WriteLine ()
+    Console.WriteLine ();
 }
 {
-    Console.WriteLine ()
+    Console.WriteLine ();
 }
 
 
