@@ -3,33 +3,20 @@
 // 82 -> 10
 // 9012 -> 12
 
-    Console.WriteLine("--------------------------");
-    Console.WriteLine("Ведите число для анализа: ");
-    int value = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("--------------------------");
+Console.WriteLine("Ведите число для анализа: ");
+int valueOriginal = Convert.ToInt32(Console.ReadLine());
+int value = valueOriginal;
+int sum = 0;
+int count = 0;
 
-int NuberOfChar()
-{
-    int number = value;
-    int digits = 1;
-    while (number >= 10)
+for(int i = 0; value > 0; i++)
     {
-    number = number/10;
-    digits = digits++;
+    sum = sum + value % 10;
+    value = value / 10;
+    count = i+1;
     }
-    return digits;
-}
 
-
-int S = 0;  
-int i = NuberOfChar();
-while(i > 0)
-{
-    S = value / 10 + S;
-    i = i-1;
-}
-//    return SOD;
-//}
-
-//int SumOfDigitsFinal = SumOfDigits();
-//Console.WriteLine($"Сумма цифр в числе {value} составляет {SOD}");
-Console.WriteLine(S);
+Console.WriteLine();
+Console.WriteLine($"Во введённом числе: {valueOriginal}, содержится цифр: {count}, их сумма равна: {sum}");
+Console.WriteLine();
