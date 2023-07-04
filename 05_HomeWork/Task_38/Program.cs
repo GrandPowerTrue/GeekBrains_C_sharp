@@ -36,6 +36,7 @@ for (int i = 0; i < Array.Length; i++)
     }
 }
 Console.WriteLine($"Максимальное число из массива {maximum}");
+Console.WriteLine();
 Console.WriteLine($"Минимальное число из массива {minimum}");
 
 int delta = maximum - minimum;
